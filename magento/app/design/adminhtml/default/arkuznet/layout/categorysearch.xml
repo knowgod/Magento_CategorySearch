@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<!--
+
+/**
+ * ArkuzNet
+ *
+ * @category    design
+ * @package     default_arkuznet
+ * @copyright   Copyright (c) 2012 ArkuzNet
+ * @author      Arkadij Kuzhel <knowgod@arkuz.net>
+ */
+
+ -->
+
+<layout>
+
+    <categorysearch_to_head>
+        <reference name="head">
+            <action method="addJs"><script>arkuznet/categorysearch.js</script></action>
+        </reference>
+    </categorysearch_to_head>
+
+    <adminhtml_catalog_category_edit>
+        <update handle="categorysearch_to_head" />
+        <reference name="left">
+            <block type="categorysearch/form" name="categorysearch" template="catalog/categorysearch/form.phtml" after="category.tree" />
+        </reference>
+    </adminhtml_catalog_category_edit>
+
+    <adminhtml_cms_block_edit>
+        <update handle="categorysearch_to_head" />
+    </adminhtml_cms_block_edit>
+
+    <adminhtml_cms_page_edit>
+        <update handle="categorysearch_to_head" />
+    </adminhtml_cms_page_edit>
+
+    <adminhtml_catalog_product_edit>
+        <update handle="categorysearch_to_head" />
+    </adminhtml_catalog_product_edit>
+
+    <adminhtml_catalog_product_categories>
+        <reference name="root">
+            <block type="categorysearch/form" name="categorysearch" template="catalog/categorysearch/form.phtml" />
+        </reference>
+    </adminhtml_catalog_product_categories>
+
+</layout>

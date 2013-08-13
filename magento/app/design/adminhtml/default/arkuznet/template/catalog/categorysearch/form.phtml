@@ -1,0 +1,52 @@
+<?php
+/**
+ * ArkuzNet
+ *
+ * @category    design
+ * @package     default_arkuznet
+ * @copyright   Copyright (c) 2012 ArkuzNet
+ * @author      Arkadij Kuzhel <knowgod@arkuz.net>
+ */
+?>
+
+<?php if ($this->getRoot()): ?>
+
+    <?php
+    $linkingScript = <<<SCR
+        $$('.x-tree')[0].insert({
+            top:$('tree-search')
+        });
+        Event.observe($('tree-search'), 'keyup', function() {
+            categoryTreeSearch.filter(this);
+        });
+        Event.observe($('tree-search'), 'change', function() {
+            categoryTreeSearch.filter(this);
+        });
+        Event.observe($('tree-search'), 'mouseup', function() {
+            categoryTreeSearch.filter(this);
+        });
+        Event.observe($('tree-search'), 'input', function() {
+            categoryTreeSearch.filter(this);
+        });
+SCR;
+    switch ($this->getAction()->getFullActionName()) {
+        case 'adminhtml_catalog_category_edit':
+            $linkingScript = "Event.observe(window, 'load', function() {" . $linkingScript . "});";
+            break;
+        case 'adminhtml_catalog_category_widget_chooser':
+            $linkingScript = preg_replace('#(categoryTreeSearch.filter\(this)#', '$1, true', $linkingScript);
+            break;
+//            case 'adminhtml_catalog_product_categories':
+        default:
+            break;
+    }
+    ?>
+    <script type="text/javascript">
+        <?php echo $linkingScript ?>
+         var searchField = $('tree-search');
+        searchField.oldvalue = (undefined == searchField.oldvalue) ? searchField.value : searchField.oldvalue;
+    </script>
+    <div class="tree-search">
+        <input id="tree-search" name="tree-search" oldvalue="" />
+    </div>
+<?php endif; ?>

@@ -1,0 +1,76 @@
+<?xml version="1.0"?>
+
+<!--
+
+/**
+ * ArkuzNet
+ *
+ * @category    ArkuzNet
+ * @package     ArkuzNet_CategorySearch1
+ * @copyright   Copyright (c) 2012 ArkuzNet
+ * @author      Arkadij Kuzhel <knowgod@arkuz.net>
+ */
+
+ -->
+
+<config>
+    <modules>
+        <ArkuzNet_CategorySearch1>
+            <version>0.1.4</version>
+        </ArkuzNet_CategorySearch1>
+    </modules>
+    <global>
+        <blocks>
+            <categorysearch>
+                <class>ArkuzNet_CategorySearch1_Block</class>
+            </categorysearch>
+        </blocks>
+        <models>
+            <categorysearch>
+                <class>ArkuzNet_CategorySearch1_Model</class>
+            </categorysearch>
+        </models>
+        <events>
+            <controller_action_postdispatch_adminhtml_catalog_category_widget_chooser>
+                <observers>
+                    <addCategorySearchToWidget>
+                        <type>singleton</type>
+                        <class>categorysearch/observer</class>
+                        <method>addCategorySearchToWidget</method>
+                    </addCategorySearchToWidget>
+                </observers>
+            </controller_action_postdispatch_adminhtml_catalog_category_widget_chooser>
+            <controller_action_postdispatch_adminhtml_catalog_product_categories>
+                <observers>
+                    <addCategorySearchToProduct>
+                        <type>singleton</type>
+                        <class>categorysearch/observer</class>
+                        <method>addCategorySearchToProduct</method>
+                    </addCategorySearchToProduct>
+                </observers>
+            </controller_action_postdispatch_adminhtml_catalog_product_categories>
+        </events>
+    </global>
+    <adminhtml>
+        <layout>
+            <updates>
+                <categorysearch>
+                    <file>categorysearch.xml</file>
+                </categorysearch>
+            </updates>
+        </layout>
+    </adminhtml>
+    <stores>
+        <admin>
+            <design>
+                <package>
+                    <name>default</name>
+                </package>
+                <theme>
+                    <layout>arkuznet</layout>
+                    <template>arkuznet</template>
+                </theme>
+            </design>
+        </admin>
+    </stores>
+</config>
