@@ -23,3 +23,5 @@ Category searching is available in admin panel:
 
 The search can be performed by plain string or even regular expression.
 
+Please check the directory **screenshots** to see how it looks at 3 various pages.
+
