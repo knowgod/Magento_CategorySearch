@@ -1,19 +1,19 @@
 <?xml version="1.0"?>
 <!--
 /**
- * CategorySearch1 JavaScript
+ * CategorySearch JavaScript
  *
  * @category    ArkuzNet
- * @package     ArkuzNet_CategorySearch1
+ * @package     ArkuzNet_CategorySearch
  * @copyright   Copyright (c) 2012 ArkuzNet
- * @author      Arkadij Kuzhel <knowgod@arkuz.net>
+ * @author      Arkadij Kuzhel <arkuzhel@gmail.com>
  */
 -->
 <config>
     <modules>
-        <ArkuzNet_CategorySearch1>
+        <ArkuzNet_CategorySearch>
             <active>true</active>
             <codePool>local</codePool>
-        </ArkuzNet_CategorySearch1>
+        </ArkuzNet_CategorySearch>
     </modules>
 </config>

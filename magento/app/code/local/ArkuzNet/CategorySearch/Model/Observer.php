@@ -3,14 +3,14 @@
 /**
  * ArkuzNet
  *
- * CategorySearch1 observer
+ * CategorySearch observer
  *
  * @category    ArkuzNet
- * @package     ArkuzNet_CategorySearch1
+ * @package     ArkuzNet_CategorySearch
  * @copyright   Copyright (c) 2012 ArkuzNet
- * @author      Arkadij Kuzhel <knowgod@arkuz.net>
+ * @author      Arkadij Kuzhel <arkuzhel@gmail.com>
  */
-class ArkuzNet_CategorySearch1_Model_Observer extends Varien_Object
+class ArkuzNet_CategorySearch_Model_Observer extends Varien_Object
 {
 
     public function addCategorySearchToWidget($observer)

@@ -6,28 +6,28 @@
  * ArkuzNet
  *
  * @category    ArkuzNet
- * @package     ArkuzNet_CategorySearch1
+ * @package     ArkuzNet_CategorySearch
  * @copyright   Copyright (c) 2012 ArkuzNet
- * @author      Arkadij Kuzhel <knowgod@arkuz.net>
+ * @author      Arkadij Kuzhel <arkuzhel@gmail.com>
  */
 
  -->
 
 <config>
     <modules>
-        <ArkuzNet_CategorySearch1>
-            <version>0.1.4</version>
-        </ArkuzNet_CategorySearch1>
+        <ArkuzNet_CategorySearch>
+            <version>0.1.4.1</version>
+        </ArkuzNet_CategorySearch>
     </modules>
     <global>
         <blocks>
             <categorysearch>
-                <class>ArkuzNet_CategorySearch1_Block</class>
+                <class>ArkuzNet_CategorySearch_Block</class>
             </categorysearch>
         </blocks>
         <models>
             <categorysearch>
-                <class>ArkuzNet_CategorySearch1_Model</class>
+                <class>ArkuzNet_CategorySearch_Model</class>
             </categorysearch>
         </models>
         <events>

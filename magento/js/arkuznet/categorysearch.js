@@ -1,13 +1,13 @@
 
 /**
- * CategorySearch1 JavaScript
+ * CategorySearch JavaScript
  *
  * @see /js/extjs/ext-tree.js
  *
  * @category    ArkuzNet
  * @package     js
  * @copyright   Copyright (c) 2012 ArkuzNet
- * @author      Arkadij Kuzhel <knowgod@arkuz.net>
+ * @author      Arkadij Kuzhel <arkuzhel@gmail.com>
  */
 
 

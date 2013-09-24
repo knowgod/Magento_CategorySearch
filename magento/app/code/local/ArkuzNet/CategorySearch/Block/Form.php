@@ -3,14 +3,14 @@
 /**
  * ArkuzNet
  *
- * CategorySearch1 block
+ * CategorySearch block
  *
  * @category    ArkuzNet
- * @package     ArkuzNet_CategorySearch1
+ * @package     ArkuzNet_CategorySearch
  * @copyright   Copyright (c) 2012 ArkuzNet
- * @author      Arkadij Kuzhel <knowgod@arkuz.net>
+ * @author      Arkadij Kuzhel <arkuzhel@gmail.com>
  */
-class ArkuzNet_CategorySearch1_Block_Form extends Mage_Adminhtml_Block_Catalog_Category_Tree
+class ArkuzNet_CategorySearch_Block_Form extends Mage_Adminhtml_Block_Catalog_Category_Tree
 {
 
     public function getScriptPath()
